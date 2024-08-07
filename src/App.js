@@ -1,6 +1,5 @@
-import Navbar from "./page/nav_foot/navbar";
+import Navbar from "./page/nav/navbar";
 import "./app.css";
-import ParticlesBackground from "./ParticlesBackground";
 import ParticlesComponent from "./ParticlesBackground";
 
 function App() {

@@ -1,20 +1,37 @@
+@keyframes show_up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .navbar {
   position: absolute;
   z-index: 1;
+  width: 70px;
+}
+
+.navbar_togle {
+  position: absolute;
+  z-index: 1;
+  width: 250px;
 }
 
 .part_links {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
   background-color: #00000065;
   box-shadow: 1px 1px 1px #777777;
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   margin: 10px;
-  padding: 15px;
+  padding: 15px 10px;
   border-radius: 16px;
+  transition: width 3s ease;
+  width: 100%;
   a {
     text-decoration: none;
     display: flex;
@@ -28,54 +45,120 @@
       object-fit: cover;
       border-radius: 25px;
     }
-    svg {
-      font-size: 25px;
-      color: #fff;
-    }
-    p {
-      color: #fff;
-      font-size: 20px;
-      display: none;
-    }
     .logo_txt {
       font-size: 25px;
       color: #fff;
+      animation: show_up 2s forwards;
     }
   }
-  .a_about:hover::after,
-  .a_komiks:hover::after,
-  .a_jamoa:hover::after,
-  .a_event:hover::after,
-  .a_elon:hover::after,
-  .a_aloqa:hover::after {
-    content: "Biz haqimizda";
-    position: absolute;
-    background-color: #fff;
-    color: #100133;
-    padding: 3px 5px;
-    border-radius: 8px;
-    width: auto;
-    margin: 0 0 28px 25px;
-  }
-  .a_about:hover::after{
-    width: 100px;
-  }
-  .a_komiks:hover::after{
-    content: "Komikslar";
-    width: auto;
-  }
-  .a_jamoa:hover::after{
-    content: "Bizning jamoa";
-    width: 100px;
-  }
-  .a_event:hover::after{
-    content: "Ish jarayoni";
-    width: 85px;
-  }
-  .a_elon:hover::after{
-    content: "E'lonlar";
-  }
-  .a_aloqa:hover::after{
-    content: "Aloqa";
+  .link_items {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 30px;
+    padding-left: 10px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    .togle_btn {
+      background: none;
+      border: none;
+      font-size: 25px;
+      color: #fff;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 15px;
+      position: relative;
+      svg {
+        font-size: 25px;
+        color: #fff;
+      }
+      p {
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+    .a_about:hover::after,
+    .a_komiks:hover::after,
+    .a_jamoa:hover::after,
+    .a_event:hover::after,
+    .a_elon:hover::after,
+    .a_aloqa:hover::after {
+      content: "Biz haqimizda";
+      position: absolute;
+      background-color: #fff;
+      color: #100133;
+      padding: 3px 5px;
+      border-radius: 8px;
+      width: auto;
+      margin: 0 0 28px 25px;
+    }
+    .a_about:hover::after {
+      width: 100px;
+    }
+    .a_komiks:hover::after {
+      content: "Komikslar";
+      width: auto;
+    }
+    .a_jamoa:hover::after {
+      content: "Bizning jamoa";
+      width: 100px;
+    }
+    .a_event:hover::after {
+      content: "Ish jarayoni";
+      width: 85px;
+    }
+    .a_elon:hover::after {
+      content: "E'lonlar";
+    }
+    .a_aloqa:hover::after {
+      content: "Aloqa";
+    }
+    .n_about {
+      animation: show_up 1.5s forwards;
+    }
+    .n_komiks {
+      animation: show_up 2s forwards;
+    }
+    .n_jamoa {
+      animation: show_up 2.5s forwards;
+    }
+    .n_event {
+      animation: show_up 3s forwards;
+    }
+    .n_elon {
+      animation: show_up 3.5s forwards;
+    }
+    .n_aloqa {
+      animation: show_up 4s forwards;
+    }
   }
 }
+
+.tog_width {
+  width: auto;
+  transition: width 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.tog_width {
+  .link_items {
+    width: 230px;
+    padding-left: 10px;
+  }
+}
+
+// Bu qism togle yopiqligida yashirish uchun
+.hide {
+  display: none;
+}
+// yashirish uchun
