@@ -11,12 +11,14 @@
   position: absolute;
   z-index: 1;
   width: 70px;
+  padding-top: 7%;
 }
 
 .navbar_togle {
   position: absolute;
   z-index: 1;
   width: 250px;
+  padding-top: 7%;
 }
 
 .part_links {
@@ -38,7 +40,6 @@
     align-items: center;
     justify-content: left;
     gap: 15px;
-    position: relative;
     .main_logo_img {
       width: 50px;
       height: 50px;
@@ -58,7 +59,6 @@
     gap: 30px;
     padding-left: 10px;
     overflow: hidden;
-    position: relative;
     white-space: nowrap;
     .togle_btn {
       background: none;
@@ -75,7 +75,6 @@
       align-items: center;
       justify-content: left;
       gap: 15px;
-      position: relative;
       svg {
         font-size: 25px;
         color: #fff;
@@ -99,6 +98,7 @@
       border-radius: 8px;
       width: auto;
       margin: 0 0 28px 25px;
+      z-index: 1000;
     }
     .a_about:hover::after {
       width: 100px;

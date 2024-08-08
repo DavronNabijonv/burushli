@@ -1,0 +1,76 @@
+@keyframes about_anime_txt {
+    from{
+        margin-top: -100px;
+        margin-left: -280px;
+        opacity: 0;
+        scale: 1.1;
+    }
+    to{
+        margin-top: 0;
+        margin-left: 0;
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes about_anime_img{
+    from{
+        margin-bottom: -200px;
+        margin-right: -280px;
+        opacity: 0;
+        scale: 0.8;
+    }
+    to{
+        scale: 1;
+        margin-bottom: 0;
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 1200px;
+    transition: transform(-50%,-50%);
+    margin: 0 auto;
+    top: 30%;
+    left: 17%;
+    position: absolute;
+    z-index: 2;
+    .left_part{
+        width: 450px;
+        background-color: #2b27357a;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        box-shadow: 0px 0px 5px rgb(170, 163, 187);
+        padding: 15px ;
+        border-radius: 8px;
+        animation: about_anime_txt 1s forwards;
+        p{
+            color: #fff;
+            font-size: 20px;
+            line-height: 27px;
+        }
+        button{
+            border: none;
+            background-color: #fff;
+            color: #100133;
+            padding: 8px 15px;
+            margin: 20px 0 10px ; 
+            font-size: 20.8px;
+            font-weight: 500;
+        }
+    }
+    .right_part{
+        width: 615px;
+        height: 100%;
+        animation: about_anime_img 1s forwards;
+        .about_logo{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
