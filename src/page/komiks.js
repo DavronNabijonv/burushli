@@ -12,7 +12,7 @@ export default function Komiks() {
   });
 
   return (
-    <div className="komiks main_width">
+    <div className="komiks">
       <div className="komiks_navigator">
         <p
           className={`k_navbar ${komiksNav.komiks && "active"} `}

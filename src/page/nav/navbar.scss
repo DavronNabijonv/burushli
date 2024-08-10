@@ -9,6 +9,7 @@
 
 .for_fixed{
   position: fixed;
+  z-index: 1;
   width: auto;
   height: 100%;
   top: 17%;
@@ -105,7 +106,6 @@
       border-radius: 8px;
       width: auto;
       margin: 0 0 28px 25px;
-      z-index: 1000;
     }
     .a_about:hover::after {
       width: 100px;
