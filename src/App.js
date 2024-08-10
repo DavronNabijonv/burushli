@@ -3,14 +3,16 @@ import "./app.css";
 import ParticlesComponent from "./ParticlesBackground";
 import About from "./page/about";
 import Komiks from "./page/komiks";
+import Jamoa from "./page/jamoa";
 
 function App() {
   return (
     <div className="App">
       <ParticlesComponent className="particles" />
       <Navbar />
-      {/* <About /> */}
-      <Komiks />
+      {/* <About />
+      <Komiks /> */}
+      <Jamoa/>
     </div>
   );
 }
