@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import "./komiks.scss";
+import "../app.css";
+import { komiks_data } from "../database/komiks_db";
 
 export default function Komiks() {
   const [komiksNav, setKomiksNav] = useState({
@@ -9,7 +12,7 @@ export default function Komiks() {
   });
 
   return (
-    <div className="komiks">
+    <div className="komiks main_width">
       <div className="komiks_navigator">
         <p
           className={`k_navbar ${komiksNav.komiks && "active"} `}
@@ -64,23 +67,65 @@ export default function Komiks() {
           Milliy Animelar
         </p>
       </div>
-      <div className="komiks_parts">
-        {komiksNav.komiks ? (
-          <Komikslar />
-        ) : komiksNav.manga ? (
-          <Mangalar />
-        ) : komiksNav.tar_anime ? (
-          <Tarjima_Animelar />
-        ) : (
-          <Milliy_Animelar/>
-        )}
-      </div>
+      {komiksNav.komiks ? (
+        <Komikslar />
+      ) : komiksNav.manga ? (
+        <Mangalar />
+      ) : komiksNav.tar_anime ? (
+        <Tarjima_Animelar />
+      ) : (
+        <Milliy_Animelar />
+      )}
     </div>
   );
 }
 
 function Komikslar() {
-  return <div>Komiks</div>;
+  return (
+    <div className="komiks_cards">
+      {komiks_data.map((komik) => (
+        <div className="komik">
+          <div className="komik_card">
+            <img
+              src={komik.komiks_img}
+              alt="Jabrmaqom birinchi o`zbek komiksi"
+              className="komik_img"
+            />
+
+            <div className="komik_info">
+              <p>
+                Komiks nomi: <span>{komik.komiks_name}</span>
+              </p>
+              <p>
+                Komiks holati: <span>{komik.holati}</span>
+              </p>
+              <p>
+                Davlati: <span>{komik.davlat}</span>
+              </p>
+              <p>
+                Janr: <span>{komik.janri}</span>
+              </p>
+              <p>
+                Yili: <span>{komik.yili}</span>
+              </p>
+              <p>
+                Muallif: <span>{komik.muallif}</span>
+              </p>
+              <p>
+                Boblar: <span>{komik.boblar}</span>
+              </p>
+            </div>
+            <img
+              src={komik.muallif_img}
+              alt="Muallif rasmi"
+              className="muallif_img"
+            />
+          </div>
+          <button className="to_read_btn">O`qish uchun bosing</button>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function Mangalar() {

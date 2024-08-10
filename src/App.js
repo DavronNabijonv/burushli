@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <ParticlesComponent className="particles" />
       <Navbar />
-      <About/>
-      <Komiks/>
+      {/* <About /> */}
+      <Komiks />
     </div>
   );
 }

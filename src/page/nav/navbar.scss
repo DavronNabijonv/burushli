@@ -7,6 +7,13 @@
   }
 }
 
+.for_fixed{
+  position: fixed;
+  width: auto;
+  height: 100%;
+  top: 17%;
+}
+
 .navbar {
   position: absolute;
   z-index: 1;
