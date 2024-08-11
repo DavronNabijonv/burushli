@@ -1,0 +1,45 @@
+.ish_jarayoni {
+  width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .ish_nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    z-index: 1;
+    .ish_nav_txt {
+      color: #fff;
+      font-size: 20px;
+      border-bottom: 3px solid #00000000;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    .active {
+      background-color: #2d2d387a;
+      border-bottom: 3px solid #e9fa03;
+    }
+  }
+  .ish_body{
+    margin-top: 70px;
+  }
+}
+
+
+.rasmlar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content:space-between;
+    .ish_rasm{
+        width: 380px;
+        height: 300px;
+        object-fit: contain;
+        object-position: 50% 20%;
+
+    }
+}
+
