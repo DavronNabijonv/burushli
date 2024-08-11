@@ -27,20 +27,19 @@ export default function Aloqa_va_elon() {
       </div>
       <div className="aloqa_part">
         <h3>Xabar jo`natish</h3>
-        <div className="input_grp">
-          <div className="input">
-            <p>Ismingiz:</p>
-            <input type="text" placeholder="Ismingizni kiriting" required />
-          </div>
-          <div className="input">
-            <p>Telefon raqamingiz:</p>
-            <input type="text" placeholder="Telefon raqam kiriting" required />
-          </div>
-          <div className="input">
-            <p>Savol va takliflar uchun:</p>
-            <textarea placeholder="Savol va takliflarni yozing..." required />
-          </div>
+        <div className="input">
+          <p>Ismingiz:</p>
+          <input type="text" placeholder="Ismingizni kiriting" required />
         </div>
+        <div className="input">
+          <p>Telefon raqamingiz:</p>
+          <input type="text" placeholder="Telefon raqam kiriting" required />
+        </div>
+        <div className="input">
+          <p>Savol va takliflar uchun:</p>
+          <textarea placeholder="Savol va takliflarni yozing..." required />
+        </div>
+        <button className="aloqa_btn">Jo`natish</button>
       </div>
     </div>
   );
