@@ -58,7 +58,7 @@ export default function Navbar() {
             </Link>
             <Link className="a_aloqa">
               <MdConnectWithoutContact />{" "}
-              <p className={togle ? "n_aloqa" : "hide"}>Aloqa</p>
+              <p className={togle ? "n_aloqa" : "hide"}>Bog`lanish</p>
             </Link>
           </div>
         </div>
