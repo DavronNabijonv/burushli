@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-scroll";
 // iconlar wismi
@@ -19,7 +19,7 @@ export default function Navbar() {
     <div className="for_fixed">
       <div className={togle ? "navbar_togle navbar" : "navbar"}>
         <div className="part_links">
-          <Link>
+          <Link className="logo_ancor">
             <img
               src={burushliLogo}
               alt="sayt_logo_rasmi"

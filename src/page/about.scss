@@ -69,3 +69,34 @@
         }
     }
 }
+
+@media(max-width:1300px){
+    .about{
+        margin-left: 50px;
+    }
+}
+
+@media(max-width:1210px){
+    .about{
+        width: calc(100% - 100px);
+        gap: 20px;
+        flex-wrap: wrap;
+        right: 0;
+        margin-left: 80px;
+    }
+}
+
+@media(max-width:760px){
+    .about{
+        margin-left: auto;
+    }
+}
+
+@media(max-width:550px){
+    .about{
+        width: 95%;
+        .left_part{
+            width: 100%;
+        }
+    }
+}

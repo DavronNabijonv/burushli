@@ -169,3 +169,77 @@
   display: none;
 }
 // yashirish uchun
+
+
+@media(max-width:770px){
+  .for_fixed{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height:100% ;
+    bottom: 0;
+    top: 0;
+  }
+  .hide{
+    display: flex;
+    width: auto;
+    text-align: center;
+  }
+  .navbar {
+    width: 100%;
+    padding-top: 0;
+    bottom: 0;
+  }
+  .part_links{
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 0;
+    align-items: center;
+    width: 100%;
+    .logo_ancor{
+      display: none;
+    }
+    .link_items{
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      padding-left: 0;
+      gap: 10px;
+      a{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+          font-size: 16px;
+        }
+      }
+      .togle_btn{
+        display: none;
+      }
+      .a_elon{
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width:540px){
+  .hide{
+    font-size: 3vw;
+  }
+  .part_links{
+    .link_items{
+      a{
+        svg{
+          font-size: 5vw;
+        }
+        p{
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+}
