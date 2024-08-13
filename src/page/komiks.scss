@@ -1,13 +1,11 @@
 .komiks {
   padding: 20px 0;
-  height: 765px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 1430px;
   margin: 0 auto;
   margin-left: 100px;
-  overflow: hidden;
 }
 
 // bu komiks navigater header qismi
@@ -43,18 +41,9 @@
   flex-wrap: wrap;
   align-items: start;
   justify-content: left;
-  height: 700px;
   width: 100%;
   margin-top: 70px;
   gap: 10px;
-}
-.komiks_cards::-webkit-scrollbar {
-  background-color: #32335ac9;
-  width: 100%; 
-  height: 10px;
-}
-.komiks_cards::-webkit-scrollbar-thumb {
-  background-color: #cccce9e0;
 }
 
 .komik {
@@ -141,6 +130,61 @@
     margin: 20px auto;
   }
   .komiks_cards{
-    overflow: auto;
+    margin: 80px auto;
+  }
+}
+
+@media(max-width:600px){
+  .komiks{
+    padding-top: 0px;
+    margin: 0 auto;
+  }
+  .komiks_navigator{
+    width: 100%;
+    justify-content: space-around;
+    gap: 0px;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width:540px){
+  .komiks_cards{
+    margin-top: 100px;
+  }
+}
+
+@media(max-width:480px){
+  .komiks_cards{
+    align-items: center;
+    justify-content: center;
+  }
+  .komik{
+    width: 95%;
+    margin: 0 auto;
+    .to_read_btn{
+
+    }
+  }
+  .komik_card{
+    flex-direction: column;
+    .komik_img{
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media(max-width:480px){
+  .komik_card{
+    .komik_img{
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media(max-width:345px){
+  .komiks_cards{
+    margin-top: 150px;
   }
 }
