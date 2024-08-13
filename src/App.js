@@ -15,8 +15,8 @@ function App() {
       {/* <About />
       <Komiks />
       <Jamoa/> */}
-      {/* <Ish_jarayoni/> */}
-      <Aloqa_va_elon/>
+      <Ish_jarayoni/>
+      {/* <Aloqa_va_elon/> */}
     </div>
   );
 }

@@ -22,24 +22,63 @@
       border-bottom: 3px solid #e9fa03;
     }
   }
-  .ish_body{
+  .ish_body {
     margin-top: 70px;
   }
 }
 
-
-.rasmlar{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
-    justify-content:space-between;
-    .ish_rasm{
-        width: 380px;
-        height: 300px;
-        object-fit: contain;
-        object-position: 50% 20%;
-
-    }
+.rasmlar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+  .ish_rasm {
+    width: 380px;
+    height: 300px;
+    object-fit: contain;
+    object-position: 50% 20%;
+  }
 }
 
+@media (max-width: 1440px) {
+  .ish_jarayoni {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 1210px) {
+  .ish_jarayoni {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .ish_jarayoni {
+    margin-left: 100px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 760px) {
+  .ish_jarayoni {
+    align-items: center;
+    justify-content: start;
+    margin-left: 0;
+    padding-right: 0;
+    .ish_body {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media(max-width:425px){
+  .rasmlar{
+    justify-content: center;
+    gap: 25px;
+    .ish_rasm{
+      width: 95%;
+      height: auto;
+    }
+  }
+}
