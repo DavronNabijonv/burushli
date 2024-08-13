@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <ParticlesComponent className="particles" />
       <Navbar />
-      {/* <About /> */}
-      <Komiks />
-      {/* <Jamoa/>
-      <Ish_jarayoni/>
+      {/* <About />
+      <Komiks /> */}
+      <Jamoa/>
+      {/* <Ish_jarayoni/>
       <Aloqa_va_elon/> */}
     </div>
   );

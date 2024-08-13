@@ -67,3 +67,27 @@
     scale: 1.1;
   }
 }
+
+@media(max-width:1440px){
+  .jamoa{
+    padding-left: 100px;
+  }
+}
+
+
+@media(max-width:1210px){
+  .jamoa{
+    width: 100%;
+  }
+}
+
+@media(max-width:760px){
+  .jamoa{
+    padding-left: 0px;
+    justify-content: center;
+    align-items: center;
+    .jamoa_group{
+      justify-content: center;
+    }
+  }
+}
