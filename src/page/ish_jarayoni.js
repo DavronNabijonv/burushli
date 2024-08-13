@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./ish_jarayoni.scss";
 import { ish_rasmlar, ish_videolar } from "../database/ish_jarayoni_db";
+import Pdf_modal from "../modal/pdf_modal";
+import Modal from "../modal/modal";
 
 export default function Ish_jarayoni() {
   const [ishNav, setIshNav] = useState({
@@ -33,20 +35,42 @@ export default function Ish_jarayoni() {
 }
 
 function Rasmlar() {
+  const [tog_ish_rasm, setTog_ish_rasm] = useState(false);
+  const [imgTog, setImgTog] = useState();
   return (
     <div className="rasmlar">
+      {tog_ish_rasm && (
+        <Modal
+          check_type={"rasm"}
+          img_name={imgTog}
+          closeTogle={setTog_ish_rasm(false)}
+        />
+      )}
       {ish_rasmlar.map((rasm) => (
-        <img src={rasm} alt="ish jarauyonidagi rasmlar" className="ish_rasm" />
+        <img
+          src={rasm}
+          onClick={() => {setImgTog(rasm)}}
+          alt="ish jarauyonidagi rasmlar"
+          className="ish_rasm"
+        />
       ))}
     </div>
   );
 }
 
 function Videolar() {
+  const [tog_ish_video, setTog_ish_video] = useState(false);
+  const [videoTog, setVideoTog] = useState();
   return (
     <div className="rasmlar">
+      {tog_ish_video && (
+        <Modal
+          img_name={videoTog}
+          closeTogle={setTog_ish_video(false)}
+        />
+      )}
       {ish_videolar.map((video) => (
-        <video className="ish_rasm" controls>
+        <video className="ish_rasm" onClick={()=>{setVideoTog(video)}} controls>
           <source src={video} type="video/mp4" />
           Your browser does not support HTML video.
         </video>

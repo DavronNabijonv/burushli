@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./komiks.scss";
 import "../app.css";
 import { komiks_data } from "../database/komiks_db";
+import Pdf_modal from "../modal/pdf_modal";
 
 export default function Komiks() {
   const [komiksNav, setKomiksNav] = useState({
@@ -81,8 +82,15 @@ export default function Komiks() {
 }
 
 function Komikslar() {
+  const [togleModal, setTogleModal] = useState(false);
+  const [dataMod, setDataMod] = useState();
   return (
     <div className="komiks_cards">
+      {togleModal ? (
+        <Pdf_modal groups={dataMod} closeTogle={() => setTogleModal(false)} />
+      ) : (
+        ""
+      )}
       {komiks_data.map((komik) => (
         <div className="komik">
           <div className="komik_card">
@@ -121,7 +129,15 @@ function Komikslar() {
               className="muallif_img"
             />
           </div>
-          <button className="to_read_btn">O`qish uchun bosing</button>
+          <button
+            className="to_read_btn"
+            onClick={() => {
+              setDataMod(komik.boblar_pdf);
+              setTogleModal(true);
+            }}
+          >
+            O`qish uchun bosing
+          </button>
         </div>
       ))}
     </div>

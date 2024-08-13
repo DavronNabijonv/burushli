@@ -1,0 +1,17 @@
+.m_group{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c7c1d4b7;
+    img{
+        width: auto;
+        height: auto;
+    }
+    video{
+        width: auto;
+        height: auto;
+    }
+}
