@@ -13,10 +13,10 @@ function App() {
       <ParticlesComponent className="particles" />
       <Navbar />
       {/* <About />
-      <Komiks /> */}
-      <Jamoa/>
-      {/* <Ish_jarayoni/>
-      <Aloqa_va_elon/> */}
+      <Komiks />
+      <Jamoa/> */}
+      {/* <Ish_jarayoni/> */}
+      <Aloqa_va_elon/>
     </div>
   );
 }

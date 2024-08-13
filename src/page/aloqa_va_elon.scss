@@ -91,3 +91,55 @@
     border: none;
   }
 }
+
+@media(max-width:1440px){
+  .aloqa{
+    margin-left: 100px;
+    justify-content: space-around;
+    gap: 40px;
+  }
+}
+
+@media(max-width:1210px){
+  .aloqa{
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media(max-width:760px){
+  .aloqa{
+    margin-left: 0;
+    margin-bottom: 100px;
+  }
+}
+
+@media(max-width:700px){
+  .elon_part{
+    width: 95%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .danat_img{
+      width: 50%;
+    }
+  }
+}
+
+@media(max-width:550px){
+  .elon_part{
+    .danat_img{
+      width: 80%;
+    }
+  }
+}
+
+@media(max-width:375px){
+  .elon_part{
+    .danat_img{
+      width: 100%;
+    }
+  }
+}
