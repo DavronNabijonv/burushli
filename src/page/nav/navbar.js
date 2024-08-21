@@ -14,6 +14,19 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import burushliLogo from "../../images/burushli_logo.jpg";
 
 export default function Navbar() {
+  return (
+    <>
+      <div className="desktop">
+        <Desktop_navbar />
+      </div>
+      <div className="mobile">
+        <Mobile_navbar />
+      </div>
+    </>
+  );
+}
+
+function Desktop_navbar() {
   const [togle, setTogle] = useState(false);
   return (
     <div className="for_fixed">
@@ -61,6 +74,46 @@ export default function Navbar() {
               <p className={togle ? "n_aloqa" : "hide"}>Bog`lanish</p>
             </Link>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Mobile_navbar() {
+  const [togle, setTogle] = useState(false);
+  return (
+    <div className={togle ? "mobile_togle mobile" : "mobile"}>
+      <div className="mobile_nav">
+        <div className="nav1">
+          <Link className="a_about">
+            <FaUser /> <p className="mobile_txt">Biz</p>
+          </Link>
+          <Link className="a_komiks">
+            <SiAntdesign /> <p className="mobile_txt">Komiks</p>
+          </Link>
+          <Link className="a_jamoa">
+            <HiMiniUserGroup /> <p className="mobile_txt">Jamoa</p>
+          </Link>
+          <button
+            className="mobile_btn"
+            onClick={() => {
+              setTogle(!togle);
+            }}
+          >
+            <HiOutlineMenuAlt2 />
+          </button>
+        </div>
+        <div className={togle?"nav1 anim": "hide_anime"}>
+          <Link className="a_event">
+            <IoCodeWorkingSharp /> <p className="mobile_txt">Ish</p>
+          </Link>
+          <Link className="a_elon">
+            <MdOutlineWorkspacePremium /> <p className="mobile_txt">E'lon</p>
+          </Link>
+          <Link className="a_aloqa">
+            <MdConnectWithoutContact /> <p className="mobile_txt">Aloqa</p>
+          </Link>
         </div>
       </div>
     </div>
