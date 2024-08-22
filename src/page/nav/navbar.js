@@ -32,7 +32,14 @@ function Desktop_navbar() {
     <div className="for_fixed">
       <div className={togle ? "navbar_togle navbar" : "navbar"}>
         <div className="part_links">
-          <Link className="logo_ancor">
+          <Link
+            className="logo_ancor"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={100}
+            duration={500}
+          >
             <img
               src={burushliLogo}
               alt="sayt_logo_rasmi"
@@ -49,27 +56,75 @@ function Desktop_navbar() {
             >
               {togle ? <IoCloseSharp /> : <HiOutlineMenuAlt2 />}{" "}
             </button>
-            <Link className="a_about">
+            <Link
+              className="a_about"
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-300}
+              duration={500}
+            >
               <FaUser />{" "}
               <p className={togle ? "n_about" : "hide"}>Biz haqimizda</p>
             </Link>
-            <Link className="a_komiks">
+            <Link
+              className="a_komiks"
+              activeClass="active"
+              to="komiks"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
               <SiAntdesign />{" "}
               <p className={togle ? "n_komiks" : "hide"}>Komikslar</p>
             </Link>
-            <Link className="a_jamoa">
+            <Link
+              className="a_jamoa"
+              activeClass="active"
+              to="jamoa"
+              spy={true}
+              smooth={true}
+              offset={-20}
+              duration={500}
+            >
               <HiMiniUserGroup />{" "}
               <p className={togle ? "n_jamoa" : "hide"}>Bizning jamoa</p>
             </Link>
-            <Link className="a_event">
+            <Link
+              className="a_event"
+              activeClass="active"
+              to="ish"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               <IoCodeWorkingSharp />{" "}
               <p className={togle ? "n_event" : "hide"}>Ish jarayonidan...</p>
             </Link>
-            <Link className="a_elon">
+            <Link
+              className="a_elon"
+              activeClass="active"
+              to="aloqa"
+              spy={true}
+              smooth={true}
+              offset={100}
+              duration={500}
+            >
               <MdOutlineWorkspacePremium />{" "}
               <p className={togle ? "n_elon" : "hide"}>E'lonlar</p>
             </Link>
-            <Link className="a_aloqa">
+            <Link
+              className="a_aloqa"
+              activeClass="active"
+              to="aloqa"
+              spy={true}
+              smooth={true}
+              offset={100}
+              duration={500}
+            >
               <MdConnectWithoutContact />{" "}
               <p className={togle ? "n_aloqa" : "hide"}>Bog`lanish</p>
             </Link>
@@ -104,7 +159,7 @@ function Mobile_navbar() {
             <HiOutlineMenuAlt2 />
           </button>
         </div>
-        <div className={togle?"nav1 anim": "hide_anime"}>
+        <div className={togle ? "nav1 anim" : "hide_anime"}>
           <Link className="a_event">
             <IoCodeWorkingSharp /> <p className="mobile_txt">Ish</p>
           </Link>

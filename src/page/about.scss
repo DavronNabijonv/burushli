@@ -1,40 +1,10 @@
-@keyframes about_anime_txt {
-    from{
-        margin-top: -100px;
-        margin-left: -280px;
-        opacity: 0;
-        scale: 1.1;
-    }
-    to{
-        margin-top: 0;
-        margin-left: 0;
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@keyframes about_anime_img{
-    from{
-        margin-bottom: -200px;
-        margin-right: -280px;
-        opacity: 0;
-        scale: 0.8;
-    }
-    to{
-        scale: 1;
-        margin-bottom: 0;
-        margin-right: 0;
-        opacity: 1;
-    }
-}
-
 .about{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
     width: 1200px;
-    margin: 15% auto;
+    margin: 8% auto;
     .left_part{
         width: 450px;
         background-color: #2b27357a;
