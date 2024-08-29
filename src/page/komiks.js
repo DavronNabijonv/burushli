@@ -3,6 +3,8 @@ import "./komiks.scss";
 import "../app.css";
 import { komiks_data } from "../database/komiks_db";
 import Pdf_modal from "../modal/pdf_modal";
+import Card from "../frame_motion/card";
+import Inner_nav from "../frame_motion/inner_nav";
 
 export default function Komiks() {
   const [komiksNav, setKomiksNav] = useState({
@@ -14,60 +16,62 @@ export default function Komiks() {
 
   return (
     <div className="komiks">
-      <div className="komiks_navigator">
-        <p
-          className={`k_navbar ${komiksNav.komiks && "active"} `}
-          onClick={() => {
-            setKomiksNav({
-              komiks: true,
-              manga: false,
-              tar_anime: false,
-              mil_anime: false,
-            });
-          }}
-        >
-          Komiks
-        </p>
-        <p
-          className={`k_navbar ${komiksNav.manga && "active"} `}
-          onClick={() => {
-            setKomiksNav({
-              komiks: false,
-              manga: true,
-              tar_anime: false,
-              mil_anime: false,
-            });
-          }}
-        >
-          Manga
-        </p>
-        <p
-          className={`k_navbar ${komiksNav.tar_anime && "active"} `}
-          onClick={() => {
-            setKomiksNav({
-              komiks: false,
-              manga: false,
-              tar_anime: true,
-              mil_anime: false,
-            });
-          }}
-        >
-          Tarjima Animelar
-        </p>
-        <p
-          className={`k_navbar ${komiksNav.mil_anime && "active"} `}
-          onClick={() => {
-            setKomiksNav({
-              komiks: false,
-              manga: false,
-              tar_anime: false,
-              mil_anime: true,
-            });
-          }}
-        >
-          Milliy Animelar
-        </p>
-      </div>
+      <Inner_nav>
+        <div className="komiks_navigator">
+          <p
+            className={`k_navbar ${komiksNav.komiks && "active"} `}
+            onClick={() => {
+              setKomiksNav({
+                komiks: true,
+                manga: false,
+                tar_anime: false,
+                mil_anime: false,
+              });
+            }}
+          >
+            Komiks
+          </p>
+          <p
+            className={`k_navbar ${komiksNav.manga && "active"} `}
+            onClick={() => {
+              setKomiksNav({
+                komiks: false,
+                manga: true,
+                tar_anime: false,
+                mil_anime: false,
+              });
+            }}
+          >
+            Manga
+          </p>
+          <p
+            className={`k_navbar ${komiksNav.tar_anime && "active"} `}
+            onClick={() => {
+              setKomiksNav({
+                komiks: false,
+                manga: false,
+                tar_anime: true,
+                mil_anime: false,
+              });
+            }}
+          >
+            Tarjima Animelar
+          </p>
+          <p
+            className={`k_navbar ${komiksNav.mil_anime && "active"} `}
+            onClick={() => {
+              setKomiksNav({
+                komiks: false,
+                manga: false,
+                tar_anime: false,
+                mil_anime: true,
+              });
+            }}
+          >
+            Milliy Animelar
+          </p>
+        </div>
+      </Inner_nav>
       {komiksNav.komiks ? (
         <Komikslar />
       ) : komiksNav.manga ? (
@@ -92,7 +96,7 @@ function Komikslar() {
         ""
       )}
       {komiks_data.map((komik) => (
-        <div className="komik">
+        <Card classNameCard={"komik"}>
           <div className="komik_card">
             <img
               src={komik.komiks_img}
@@ -138,7 +142,7 @@ function Komikslar() {
           >
             O`qish uchun bosing
           </button>
-        </div>
+        </Card>
       ))}
     </div>
   );

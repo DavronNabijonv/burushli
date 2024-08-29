@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 // iconlar wismi
 import { FaUser } from "react-icons/fa";
 import { SiAntdesign } from "react-icons/si";
@@ -16,8 +17,19 @@ import burushliLogo from "../../images/burushli_logo.jpg";
 export default function Navbar() {
   return (
     <>
-      <div className="desktop">
-        <Desktop_navbar />
+      <div style={{ position: "relative", overflow: "hidden" }}>
+        <motion.div
+          className="desktop"
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visibility: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate="visibility"
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          <Desktop_navbar />
+        </motion.div>
       </div>
       <div className="mobile">
         <Mobile_navbar />
