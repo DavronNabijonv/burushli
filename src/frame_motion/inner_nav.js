@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function Inner_nav({children,width="fit-content"}) {
+export default function Inner_nav({children,width="fit-content"||'600px'}) {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   const slideControls = useAnimation();
 
@@ -15,7 +15,7 @@ export default function Inner_nav({children,width="fit-content"}) {
   }, [inView, slideControls]);
 
   return (
-    <div ref={ref} style={{ position: 'relative', width, overflow: 'hidden' }}>
+    <div ref={ref} style={{ position: 'relative', width}}>
       {children}
       <motion.div
         variants={{
@@ -29,7 +29,7 @@ export default function Inner_nav({children,width="fit-content"}) {
             position:'absolute',
             top:-4,
             bottom:-4,
-            left:0,
+            
             right:0,
             background:'#fff',
             zIndex:20,

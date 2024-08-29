@@ -17,60 +17,60 @@ export default function Komiks() {
   return (
     <div className="komiks">
       <Inner_nav>
-        <div className="komiks_navigator">
-          <p
-            className={`k_navbar ${komiksNav.komiks && "active"} `}
-            onClick={() => {
-              setKomiksNav({
-                komiks: true,
-                manga: false,
-                tar_anime: false,
-                mil_anime: false,
-              });
-            }}
-          >
-            Komiks
-          </p>
-          <p
-            className={`k_navbar ${komiksNav.manga && "active"} `}
-            onClick={() => {
-              setKomiksNav({
-                komiks: false,
-                manga: true,
-                tar_anime: false,
-                mil_anime: false,
-              });
-            }}
-          >
-            Manga
-          </p>
-          <p
-            className={`k_navbar ${komiksNav.tar_anime && "active"} `}
-            onClick={() => {
-              setKomiksNav({
-                komiks: false,
-                manga: false,
-                tar_anime: true,
-                mil_anime: false,
-              });
-            }}
-          >
-            Tarjima Animelar
-          </p>
-          <p
-            className={`k_navbar ${komiksNav.mil_anime && "active"} `}
-            onClick={() => {
-              setKomiksNav({
-                komiks: false,
-                manga: false,
-                tar_anime: false,
-                mil_anime: true,
-              });
-            }}
-          >
-            Milliy Animelar
-          </p>
-        </div>
+      <div className="komiks_navigator">
+        <p
+          className={`k_navbar ${komiksNav.komiks && "active"} `}
+          onClick={() => {
+            setKomiksNav({
+              komiks: true,
+              manga: false,
+              tar_anime: false,
+              mil_anime: false,
+            });
+          }}
+        >
+          Komiks
+        </p>
+        <p
+          className={`k_navbar ${komiksNav.manga && "active"} `}
+          onClick={() => {
+            setKomiksNav({
+              komiks: false,
+              manga: true,
+              tar_anime: false,
+              mil_anime: false,
+            });
+          }}
+        >
+          Manga
+        </p>
+        <p
+          className={`k_navbar ${komiksNav.tar_anime && "active"} `}
+          onClick={() => {
+            setKomiksNav({
+              komiks: false,
+              manga: false,
+              tar_anime: true,
+              mil_anime: false,
+            });
+          }}
+        >
+          Tarjima Animelar
+        </p>
+        <p
+          className={`k_navbar ${komiksNav.mil_anime && "active"} `}
+          onClick={() => {
+            setKomiksNav({
+              komiks: false,
+              manga: false,
+              tar_anime: false,
+              mil_anime: true,
+            });
+          }}
+        >
+          Milliy Animelar
+        </p>
+      </div>
       </Inner_nav>
       {komiksNav.komiks ? (
         <Komikslar />
