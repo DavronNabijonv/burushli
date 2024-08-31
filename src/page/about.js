@@ -15,7 +15,7 @@ export default function About() {
         }}
         initial="hidden"
         animate="visibility"
-        transition={{ duration: 0.7 ,ease:'easeInOut' }}
+        transition={{ duration: 0.7 , delay:3, ease:'easeInOut' }}
       >
         <p>
           "Burushli " media studio 2023-yilda tashkil topgan bo`lib , hozirda
@@ -34,7 +34,7 @@ export default function About() {
           }}
           initial="hidden"
           animate="visibility"
-          transition={{ duration: 0.7, ease:'easeInOut'}}
+          transition={{ duration: 0.7, ease:'easeInOut',delay:3}}
         >
           <img src={about_logo} alt="about logo image" className="about_logo" />
         </motion.div>

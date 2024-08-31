@@ -26,7 +26,7 @@ export default function Navbar() {
           }}
           initial="hidden"
           animate="visibility"
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.5, ease: "easeInOut" ,delay:3}}
         >
           <Desktop_navbar />
         </motion.div>

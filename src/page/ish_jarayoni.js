@@ -11,23 +11,20 @@ export default function Ish_jarayoni() {
     video: false,
     rasm: true,
   });
+
   return (
     <div className="ish_jarayoni">
       <Inner_nav>
         <div className="ish_nav">
           <p
             className={`ish_nav_txt ${ishNav.video && "active"}`}
-            onClick={() => {
-              setIshNav({ rasm: false, video: true });
-            }}
+            onClick={() => setIshNav({ rasm: false, video: true })}
           >
             Videolar
           </p>
           <p
             className={`ish_nav_txt ${ishNav.rasm && "active"}`}
-            onClick={() => {
-              setIshNav({ rasm: true, video: false });
-            }}
+            onClick={() => setIshNav({ rasm: true, video: false })}
           >
             Rasmlar
           </p>
@@ -41,23 +38,25 @@ export default function Ish_jarayoni() {
 function Rasmlar() {
   const [tog_ish_rasm, setTog_ish_rasm] = useState(false);
   const [imgTog, setImgTog] = useState();
+
   return (
     <div className="rasmlar">
       {tog_ish_rasm && (
         <Modal
           check_type={"rasm"}
           img_name={imgTog}
-          closeTogle={setTog_ish_rasm(false)}
+          closeTogle={() => setTog_ish_rasm(false)}
         />
       )}
-      {ish_rasmlar.map((rasm) => (
-        <Card>
+      {ish_rasmlar.map((rasm, index) => (
+        <Card key={index}>
           <img
             src={rasm}
             onClick={() => {
               setImgTog(rasm);
+              setTog_ish_rasm(true);
             }}
-            alt="ish jarauyonidagi rasmlar"
+            alt="ish jarayoni rasm"
             className="ish_rasm"
           />
         </Card>
@@ -67,15 +66,12 @@ function Rasmlar() {
 }
 
 function Videolar() {
-  const [tog_ish_video, setTog_ish_video] = useState(false);
   const [videoTog, setVideoTog] = useState();
+
   return (
     <div className="rasmlar">
-      {tog_ish_video && (
-        <Modal img_name={videoTog} closeTogle={setTog_ish_video(false)} />
-      )}
-      {ish_videolar.map((video) => (
-        <Card>
+      {ish_videolar.map((video, index) => (
+        <Card key={index}>
           <video
             className="ish_rasm"
             onClick={() => {
