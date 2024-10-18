@@ -44,7 +44,7 @@ function Desktop_navbar() {
     <div className="for_fixed">
       <div className={togle ? "navbar_togle navbar" : "navbar"}>
         <div className="part_links">
-          <Link
+          {/* <Link
             className="logo_ancor"
             to="about"
             spy={true}
@@ -58,7 +58,7 @@ function Desktop_navbar() {
               className="main_logo_img"
             />{" "}
             <p className={togle ? "logo_txt" : "hide"}> Burushli </p>
-          </Link>
+          </Link> */}
           <div className="link_items">
             <button
               className="togle_btn"
@@ -116,7 +116,7 @@ function Desktop_navbar() {
               <IoCodeWorkingSharp />{" "}
               <p className={togle ? "n_event" : "hide"}>Ish jarayonidan...</p>
             </Link>
-            <Link
+            {/* <Link
               className="a_elon"
               activeClass="active"
               to="aloqa"
@@ -139,7 +139,7 @@ function Desktop_navbar() {
             >
               <MdConnectWithoutContact />{" "}
               <p className={togle ? "n_aloqa" : "hide"}>Bog`lanish</p>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 .aloqa {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 1200px;
   margin: 10% auto;
 }
@@ -50,7 +50,7 @@
   flex-direction: column;
   gap: 15px;
   color: #fff;
-  background-color: #59588179;
+  background-color: #100133;
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   width: 380px;

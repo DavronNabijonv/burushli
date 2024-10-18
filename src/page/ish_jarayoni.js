@@ -5,6 +5,7 @@ import Pdf_modal from "../modal/pdf_modal";
 import Modal from "../modal/modal";
 import Card from "../frame_motion/card";
 import Inner_nav from "../frame_motion/inner_nav";
+import ParticlesComponent from "../ParticlesBackground";
 
 export default function Ish_jarayoni() {
   const [ishNav, setIshNav] = useState({
@@ -14,6 +15,7 @@ export default function Ish_jarayoni() {
 
   return (
     <div className="ish_jarayoni">
+      <ParticlesComponent className="particles"/>
       <Inner_nav>
         <div className="ish_nav">
           <p

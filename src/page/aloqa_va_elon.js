@@ -1,12 +1,17 @@
-import React from "react";
+import React , {useContext} from "react";
 import "./aloqa_va_elon.scss";
 import danat from "../images/danat_img.jpg";
 import Card from "../frame_motion/card";
+import { ContactModaltogle } from "../App";
 
 export default function Aloqa_va_elon() {
+
+  // show hide contact modal
+  const {setModalTog} = useContext(ContactModaltogle)
+
   return (
     <div className="aloqa">
-      <Card>
+      {/* <Card>
         <div className="elon_part">
           <img src={danat} alt="karta rasmi" className="danat_img" />
           <div className="elon_txt_group">
@@ -20,14 +25,14 @@ export default function Aloqa_va_elon() {
               qo’llab-quvvatlaganingiz uchun katta raxmat
             </p>
             <p>
-              (Donat chekni{" "}
-              <a href="https://t.me/burushli_studio">@burushli_studio</a>{" "}
+              (Donat chekni
+              <a href="https://t.me/burushli_studio">@burushli_studio</a>
               telegramga junativoring, shunda ismingizni shon-sharaflar postida
               yozolamiz )
             </p>
           </div>
         </div>
-      </Card>
+      </Card> */}
       <Card>
         <div className="aloqa_part">
           <h3>Xabar jo`natish</h3>
@@ -43,7 +48,7 @@ export default function Aloqa_va_elon() {
             <p>Savol va takliflar uchun:</p>
             <textarea placeholder="Savol va takliflarni yozing..." required />
           </div>
-          <button className="aloqa_btn">Jo`natish</button>
+          <button className="aloqa_btn" onClick={()=>{setModalTog(false)}}>Jo`natish</button>
         </div>
       </Card>
     </div>
