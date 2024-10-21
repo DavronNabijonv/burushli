@@ -12,6 +12,7 @@ import Load from "./page/loading_page/load";
 import { useEffect, useState } from "react";
 import Head_nav from "./page/nav/head_nav";
 import Contact_modal from "./modal/contact_modal";
+import Foote from "./page/nav/foote";
 
 // modal context for contact
 export const ContactModaltogle = React.createContext();
@@ -44,12 +45,12 @@ function App() {
     <ScreenWidth.Provider value={{screenWidth}}>
       <ContactModaltogle.Provider value={{ modalTog, setModalTog }}>
         <div className="App">
-          {/* <div className={tog_app ? "close" : "open"}>
+          <div className={tog_app ? "close" : "open"}>
         <Load />
-      </div> */}
+      </div>
           <div className={tog_app ? "open" : "close"}>
             <Head_nav />
-            {/* <Navbar />
+            <Navbar />
             <Element name="about" className="about">
               <About />
             </Element>
@@ -61,10 +62,11 @@ function App() {
             </Element>
             <Element name="ish" className="ish">
               <Ish_jarayoni />
-            </Element> */}
+            </Element>
             {/* <Element name="aloqa" className="aloqa">
             <Aloqa_va_elon />
           </Element> */}
+          <Foote/>
           </div>
           {modalTog && <Contact_modal />}
         </div>

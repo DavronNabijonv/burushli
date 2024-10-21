@@ -1,0 +1,149 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: #0000009d;
+    padding: 30px 0;
+    padding-bottom: 0;
+    gap: 15px;
+    .foot_container{
+        width: 1200px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .navigate_to_coder{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        height: 70px;
+        a{
+            font-size: 20px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            svg{
+                margin-top: 8px;
+                font-size: 30px;
+            }
+        }
+        a:hover{
+            color: blue;
+        }
+    }
+}
+
+.grps{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    // first group styles
+    .logo{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 10px;
+        color: #fff;
+        p{
+            font-size: 22px;
+        }
+        img{
+            width: 60px;
+            border-radius: 16px;
+        }
+    }
+    .foot_txt{
+        color: #fff;
+        font-size: 18px;
+        margin: 20px 0;
+    }
+    .app_downloadPart{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: start;
+        width: 100%;
+        .download{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 2px solid #fff;
+            border-radius: 16px;
+            background: none;
+            color: white;
+            padding: 8px 15px;
+            width: 180px;
+            cursor: pointer;
+            .phone_logo{
+                font-size: 25px;
+            }
+            .txt{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                align-items: start;
+                justify-content: start;
+            }
+        }
+    }
+    // second group styles
+    a{
+        color: #fff;
+        font-size: 20px;
+    }
+    a:hover{
+        color: rgb(8, 248, 8);
+    }
+    // third group styles
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+// responsiv part
+@media(max-width:1210px){
+    .footer{
+        gap: 30px;
+        .foot_container{
+            width: 100%;
+            padding: 0 15px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+}
+
+
+@media(max-width:670px){
+    .footer{
+        .foot_container{
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    .grps{
+        width: 100%;
+        .logo{
+            justify-content: center;
+        }
+        .app_downloadPart{
+            justify-content: center;
+        }
+    }
+}
