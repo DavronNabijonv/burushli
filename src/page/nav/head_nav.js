@@ -1,6 +1,6 @@
 import React, { useState, useEffect , useContext } from "react";
 import "./head_nav.scss";
-import { ContactModaltogle } from "../../App";
+import { ContactModaltogle, ScreenWidth } from "../../App";
 
 // images
 import logo_image from "../../images/burushli_logo.jpg";
@@ -10,11 +10,13 @@ import eng from "../../images/england.png";
 
 // icons
 import { FaTelegramPlane, FaInstagram, FaArrowUp } from "react-icons/fa";
+import { TfiAnnouncement } from "react-icons/tfi";
+import { MdOutlineMessage } from "react-icons/md";
 
 export default function Head_nav() {
 
   // window scroll down event
-  const [scrollDown,setScrollDown] = useState(false)
+  const [scrollDown,setScrollDown] = useState(true)
 
   // news show hide togle
   const [newsTogle, setNewsTogle] = useState(false);
@@ -24,6 +26,9 @@ export default function Head_nav() {
 
   // useContact for hide show
   const {setModalTog} = useContext(ContactModaltogle)
+
+  // screenWidth for change 
+  const {screenWidth} = useContext(ScreenWidth);
 
 
   // scroll event function
@@ -51,19 +56,21 @@ export default function Head_nav() {
 
         <div className="logo_part">
           <img src={logo_image} alt="logo image" className="logo_img" />
-          <p>Burushli.uz</p>
+          {screenWidth>600&&(<p>Burushli.uz</p>)}
         </div>
 
         <div className="head_aloqa">
           <div className="network_contact">
 
             <div className="news_btn">
-              <button className="news_btn" onClick={() => {setNewsTogle(!newsTogle);}} >
+              {screenWidth >= 800 ?(<button className="news_btn" onClick={() => {setNewsTogle(!newsTogle);}} >
                 Yangiliklar
                 <span style={newsTogle ? {} : { rotate: "180deg" }}>
                   <FaArrowUp />
                 </span>
-              </button>
+              </button>):(<button className="news_btn" onClick={() => {setNewsTogle(!newsTogle);}} >
+                <TfiAnnouncement />
+              </button>)}
               <p className={newsTogle ? "news_txt" : "hide"}>
                 Jabrmaqom tasviriy adabiyoti chiqarilishi to’xtab qolmasligi
                 uchun donat funksiyasini ochishga qaror qildik Donat qilingan
@@ -77,7 +84,9 @@ export default function Head_nav() {
               </p>
             </div>
 
-            <button className="contact_btn" onClick={()=>{setModalTog(true)}}>Aloqa</button>
+            <button className="contact_btn" onClick={()=>{setModalTog(true)}}>
+              {screenWidth>=800?'Aloqa':<MdOutlineMessage />}
+            </button>
 
             <span>
               <a href="https://t.me/burushli_studio">
@@ -92,14 +101,14 @@ export default function Head_nav() {
 
           </div>
 
-          {/* <div className="head_language">
+          <div className="head_language">
             <button><img src={countryFlag} alt="country flag" /></button>
             <div className="flag_dropDown">
                 <button onClick={()=>{setCountryFlag(uzb)}}><img src={uzb} alt="uzbekistan flag" /></button>
                 <button onClick={()=>{setCountryFlag(rus)}}><img src={rus} alt="russia flag" /></button>
                 <button onClick={()=>{setCountryFlag(eng)}}><img src={eng} alt="england flag" /></button>
             </div>
-          </div> */}
+          </div>
 
         </div>
         {/* head_container */}

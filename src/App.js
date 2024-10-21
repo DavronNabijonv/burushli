@@ -15,12 +15,15 @@ import Contact_modal from "./modal/contact_modal";
 
 // modal context for contact
 export const ContactModaltogle = React.createContext();
+export const ScreenWidth = React.createContext();
 
 function App() {
   const [tog_app, setTog_app] = useState(false);
+  const [screenWidth, setScreenWidh] = useState(window.innerWidth);
 
   const [modalTog, setModalTog] = useState(false);
 
+  // loading component togle effect
   useEffect(() => {
     const timer = setTimeout(() => {
       setTog_app(true);
@@ -30,34 +33,43 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // screen width effect
+  useEffect(()=>{
+    window.addEventListener('resize',()=>{setScreenWidh(window.innerWidth)});
+
+    return ()=>{window.removeEventListener('resize',()=>{setScreenWidh(window.innerWidth)})}
+  },[])
+
   return (
-    <ContactModaltogle.Provider value={{modalTog,setModalTog}}>
-      <div className="App">
-        {/* <div className={tog_app ? "close" : "open"}>
+    <ScreenWidth.Provider value={{screenWidth}}>
+      <ContactModaltogle.Provider value={{ modalTog, setModalTog }}>
+        <div className="App">
+          {/* <div className={tog_app ? "close" : "open"}>
         <Load />
       </div> */}
-        <div className={tog_app ? "open" : "close"}>
-          <Head_nav />
-          <Navbar />
-          <Element name="about" className="about">
-            <About />
-          </Element>
-          <Element name="komiks" className="komiks">
-            <Komiks />
-          </Element>
-          <Element name="jamoa" className="jamoa">
-            <Jamoa />
-          </Element>
-          <Element name="ish" className="ish">
-            <Ish_jarayoni />
-          </Element>
-          {/* <Element name="aloqa" className="aloqa">
+          <div className={tog_app ? "open" : "close"}>
+            <Head_nav />
+            {/* <Navbar />
+            <Element name="about" className="about">
+              <About />
+            </Element>
+            <Element name="komiks" className="komiks">
+              <Komiks />
+            </Element>
+            <Element name="jamoa" className="jamoa">
+              <Jamoa />
+            </Element>
+            <Element name="ish" className="ish">
+              <Ish_jarayoni />
+            </Element> */}
+            {/* <Element name="aloqa" className="aloqa">
             <Aloqa_va_elon />
           </Element> */}
+          </div>
+          {modalTog && <Contact_modal />}
         </div>
-        {modalTog&&<Contact_modal/>}
-      </div>
-    </ContactModaltogle.Provider>
+      </ContactModaltogle.Provider>
+    </ScreenWidth.Provider>
   );
 }
 
