@@ -175,43 +175,43 @@
 
 //  mobile navbar
 
-.mobile{
+.mobile {
   height: 80px;
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.mobile_togle{
+.mobile_togle {
   height: 160px;
 }
 
-@keyframes animat{
-  from{
+@keyframes animat {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 
-@keyframes teskari{
-  from{
+@keyframes teskari {
+  from {
     opacity: 1;
     height: auto;
   }
-  to{
+  to {
     height: 1px;
     opacity: 0;
   }
 }
 
-.anim{
-animation: animat .3s forwards;
-overflow: hidden;
+.anim {
+  animation: animat 0.3s forwards;
+  overflow: hidden;
 }
 
-.hide_anime{
+.hide_anime {
   animation: teskari;
   height: 1px;
   display: none;
@@ -219,7 +219,7 @@ overflow: hidden;
 .mobile_nav {
   height: 100%;
   width: 100%;
-  background-color: #00000065;
+  background-color: #000000e3;
   box-shadow: 1px 1px 1px #777777;
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
@@ -259,13 +259,20 @@ overflow: hidden;
   }
 }
 
+@media (max-width: 1024px) {
+  .for_fixed_mobile{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    .mobile {
+      display: block;
+    }
+  }
+}
+
 @media (max-width: 770px) {
-  .desktop {
-    display: none;
-  }
-  .mobile {
-    display: block;
-  }
   .for_fixed {
     position: fixed;
     z-index: 1;

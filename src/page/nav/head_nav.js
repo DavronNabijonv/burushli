@@ -81,6 +81,7 @@ export default function Head_nav() {
                  <span>(Donat chekni
                 @burushli_studio telegramga junativoring, shunda ismingizni
                 shon-sharaflar postida yozolamiz )</span>
+                <a className="danat_link" href="https://t.me/jabrmaqom/29">Karta rasmi</a>
               </p>
             </div>
 

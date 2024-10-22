@@ -50,7 +50,7 @@
 
 @media (max-width: 1440px) {
   .ish_jarayoni {
-    margin-left: 100px;
+    padding-left: 100px;
   }
 }
 
@@ -62,7 +62,7 @@
 
 @media (max-width: 850px) {
   .ish_jarayoni {
-    margin-left: 100px;
+    padding-left: 100px;
     padding-right: 30px;
   }
 }
@@ -73,6 +73,7 @@
     justify-content: start;
     margin-left: 0;
     padding-right: 0;
+    padding-left: 0;
     .ish_body {
       margin-bottom: 50px;
     }

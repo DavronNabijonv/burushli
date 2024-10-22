@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
@@ -13,8 +13,10 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 
 // images
 import burushliLogo from "../../images/burushli_logo.jpg";
+import { ScreenWidth } from "../../App";
 
 export default function Navbar() {
+  const {screenWidth} = useContext(ScreenWidth);
   return (
     <>
       <div style={{ position: "relative", overflow: "hidden" }}>
@@ -28,11 +30,8 @@ export default function Navbar() {
           animate="visibility"
           transition={{ duration: 0.5, ease: "easeInOut" ,delay:3}}
         >
-          <Desktop_navbar />
+          {screenWidth>1024?<Desktop_navbar />:<Mobile_navbar />}
         </motion.div>
-      </div>
-      <div className="mobile">
-        <Mobile_navbar />
       </div>
     </>
   );
@@ -150,7 +149,8 @@ function Desktop_navbar() {
 function Mobile_navbar() {
   const [togle, setTogle] = useState(false);
   return (
-    <div className={togle ? "mobile_togle mobile" : "mobile"}>
+    <div className="for_fixed_mobile">
+      <div className={togle ? "mobile_togle mobile" : "mobile"}>
       <div className="mobile_nav">
         <div className="nav1">
           <Link className="a_about">
@@ -162,27 +162,28 @@ function Mobile_navbar() {
           <Link className="a_jamoa">
             <HiMiniUserGroup /> <p className="mobile_txt">Jamoa</p>
           </Link>
-          <button
+          <Link className="a_event">
+            <IoCodeWorkingSharp /> <p className="mobile_txt">Ish</p>
+          </Link>
+          {/* <button
             className="mobile_btn"
             onClick={() => {
               setTogle(!togle);
             }}
           >
             <HiOutlineMenuAlt2 />
-          </button>
+          </button> */}
         </div>
         <div className={togle ? "nav1 anim" : "hide_anime"}>
-          <Link className="a_event">
-            <IoCodeWorkingSharp /> <p className="mobile_txt">Ish</p>
-          </Link>
-          <Link className="a_elon">
+          {/* <Link className="a_elon">
             <MdOutlineWorkspacePremium /> <p className="mobile_txt">E'lon</p>
           </Link>
           <Link className="a_aloqa">
             <MdConnectWithoutContact /> <p className="mobile_txt">Aloqa</p>
-          </Link>
+          </Link> */}
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function Foote() {
         <div className='foot_container'> 
 
             {/* first group */}
-            <div className='grps'>
+            <div className='grps first_grp'>
 
                 <div className='logo'>
                     <img src={logo} alt='logo_image' />

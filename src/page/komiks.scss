@@ -3,9 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 1300px;
+  width: 1200px;
   margin: 0 auto;
   margin-left: 100px;
+  margin-top: 80px;
 }
 
 // bu komiks navigater header qismi
@@ -120,6 +121,9 @@
   .komiks{
     align-items: center;
     justify-content: start;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -160,9 +164,7 @@
   .komik{
     width: 95%;
     margin: 0 auto;
-    .to_read_btn{
-
-    }
+    
   }
   .komik_card{
     flex-direction: column;
