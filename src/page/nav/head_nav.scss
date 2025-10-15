@@ -58,30 +58,6 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  .head_language {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    button {
-      width: 50px;
-      border-radius: 8px;
-      img {
-        width: 100%;
-      }
-    }
-    .flag_dropDown {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 40px;
-    }
-  }
-
-  .head_language:hover {
-    .flag_dropDown {
-      display: flex;
-    }
-  }
   // contact styles
   .network_contact {
     display: flex;

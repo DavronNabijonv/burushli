@@ -5,8 +5,6 @@ import { ContactModaltogle, ScreenWidth } from "../../App";
 // images
 import logo_image from "../../images/burushli_logo.jpg";
 import uzb from "../../images/uzb.png";
-import rus from "../../images/russia.png";
-import eng from "../../images/england.png";
 
 // icons
 import { FaTelegramPlane, FaInstagram, FaArrowUp } from "react-icons/fa";
@@ -102,14 +100,7 @@ export default function Head_nav() {
 
           </div>
 
-          <div className="head_language">
-            <button><img src={countryFlag} alt="country flag" /></button>
-            <div className="flag_dropDown">
-                <button onClick={()=>{setCountryFlag(uzb)}}><img src={uzb} alt="uzbekistan flag" /></button>
-                <button onClick={()=>{setCountryFlag(rus)}}><img src={rus} alt="russia flag" /></button>
-                <button onClick={()=>{setCountryFlag(eng)}}><img src={eng} alt="england flag" /></button>
-            </div>
-          </div>
+         
 
         </div>
         {/* head_container */}

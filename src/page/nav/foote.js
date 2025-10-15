@@ -64,9 +64,9 @@ export default function Foote() {
             {/* third group */}
 
         </div>
-        <div className='navigate_to_coder'>
+        {/* <div className='navigate_to_coder'>
             <a href='https://t.me/@ndx_09'>Frontend developer : <BiLogoTelegram/></a>
-        </div>
+        </div> */}
     </div>
   )
 }
